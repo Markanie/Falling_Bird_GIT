@@ -37,6 +37,7 @@ public class Bird extends MoveableGameObject implements ICollision{
     public void update()
     {
 
+
         super.update();
       //  Log.d("roll", "" + MotionSensor.roll);
         setySpeed(((MotionSensor.roll-88)*-1)/0.8);
@@ -55,7 +56,6 @@ public class Bird extends MoveableGameObject implements ICollision{
         if (gameObjects != null && gameObjects.size() > 0) {
             for(GameObject gameObject : gameObjects) {
                 if(gameObject instanceof Berry){
-
                     gameObject.setVisibility(false);
                 }
             }
@@ -76,12 +76,12 @@ public class Bird extends MoveableGameObject implements ICollision{
     @Override
     public ArrayList<GameObject> getCollidedObjects() {
         ArrayList<GameObject> collidedObjects = new ArrayList<GameObject>();
-
-        // move this part to GameEngine itself (and make 'items' private!!
-        // check if other item is active
         for (int i = 0; i < GameEngine.items.size(); i++) {
             if (GameEngine.items.get(i) != this) {
-                if (Rect.intersects(this.position, GameEngine.items.get(i).position)) {
+             //   Log.d("object y", GameEngine.items.get(i).getY() + "" );
+              //  Log.d("bird y",  this.getCenterY() + "");
+                if (this.ylocation > GameEngine.items.get(i).getY()- GameEngine.items.get(i).getFrameHeight() &&
+                        this.ylocation < GameEngine.items.get(i).getY()+ GameEngine.items.get(i).getFrameHeight()) {
                     collidedObjects.add(GameEngine.items.get(i));
                 }
             }

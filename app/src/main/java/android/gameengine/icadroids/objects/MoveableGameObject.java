@@ -463,7 +463,7 @@ public class MoveableGameObject extends GameObject {
 	 *         Note that you will never get the object calling this function
 	 *         back.
 	 */
-	public final ArrayList<GameObject> getCollidedObjects() {
+	public ArrayList<GameObject> getCollidedObjects() {
 		ArrayList<GameObject> collidedObjects = new ArrayList<GameObject>();
 
 		// move this part to GameEngine itself (and make 'items' private!!

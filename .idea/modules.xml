@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/FallingBird.iml" filepath="$PROJECT_DIR$/FallingBird.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Falling_Bird_GIT.iml" filepath="$PROJECT_DIR$/Falling_Bird_GIT.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>
