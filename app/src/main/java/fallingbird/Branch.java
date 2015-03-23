@@ -17,9 +17,9 @@ public class Branch extends Obstacle implements ICollision{
         else if (pos == "right"){
             setSprite("rbranch");
         }
-//        else if (pos == "centre"){
-//            setSprite("cbranch");
-//        }
+        else if (pos == "centre"){
+            setSprite("cbranch");
+        }
         this.setySpeed(speed);
     }
     public void update() {

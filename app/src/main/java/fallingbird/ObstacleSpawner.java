@@ -43,6 +43,7 @@ class ObstacleSpawner implements IAlarm{
             Branch r = new Branch(mygame, side, ObstacleSpeed);
             mygame.addGameObject(r, GameEngine.getScreenWidth(), 0);
             if(side == "right"){
+<<<<<<< HEAD
                 mygame.addGameObject(r, GameEngine.getScreenWidth() - r.getFrameWidth(),GameEngine.getScreenHeight());
             }
             else if(side == "left") {
@@ -50,6 +51,15 @@ class ObstacleSpawner implements IAlarm{
             }
             else {
                 mygame.addGameObject(r, GameEngine.getScreenHeight(), GameEngine.getScreenWidth() - r.getFrameWidth()/2);
+=======
+                mygame.addGameObject(r, GameEngine.getScreenWidth(), 0);
+            }
+            else if(side == "left") {
+                mygame.addGameObject(r, GameEngine.getScreenWidth(), GameEngine.getScreenHeight()-300);
+            }
+            else {
+                mygame.addGameObject(r, GameEngine.getScreenWidth(), GameEngine.getScreenHeight()/2-150);
+>>>>>>> origin/master
             }
         }
 
