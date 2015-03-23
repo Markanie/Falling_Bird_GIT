@@ -38,9 +38,9 @@ public class ObstacleSpawner implements IAlarm{
             BerryAlarm.restartAlarm();
             Berry s = new Berry(mygame, ObstacleSpeed);
             // world size has not been fixed, put it in a block of 600*400 pixels
-            int y = 10 + (int) (990 * Math.random());
+            int x = 10 + (int) (990 * Math.random());
 
-            mygame.addGameObject(s, GameEngine.getScreenWidth(), y);
+            mygame.addGameObject(s,x , GameEngine.getScreenHeight());
         }
 
         else if (id == 2) {
@@ -49,8 +49,8 @@ public class ObstacleSpawner implements IAlarm{
             Branch r = new Branch(mygame, "right", ObstacleSpeed);
             Branch l = new Branch(mygame, "left", ObstacleSpeed);
             Log.d("alarm test", "Branch alarm!" + id);
-            mygame.addGameObject(r, GameEngine.getScreenWidth(), 0);
-            mygame.addGameObject(l, GameEngine.getScreenWidth(), GameEngine.getScreenHeight()-300);
+            mygame.addGameObject(r, GameEngine.getScreenWidth() - r.getFrameWidth(), GameEngine.getScreenHeight());
+            mygame.addGameObject(l, 0, GameEngine.getScreenHeight());
         }
         else if (id==3) {
             

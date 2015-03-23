@@ -20,7 +20,7 @@ public class Branch extends Obstacle implements ICollision{
 //        else if (pos == "centre"){
 //            setSprite("cbranch");
 //        }
-        this.setxSpeed(speed);
+        this.setySpeed(speed);
     }
     public void update() {
         super.update();

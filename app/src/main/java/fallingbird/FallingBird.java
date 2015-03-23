@@ -1,5 +1,6 @@
 package fallingbird;
 
+import android.content.pm.ActivityInfo;
 import android.gameengine.icadroids.dashboard.DashboardTextView;
 import android.gameengine.icadroids.engine.GameEngine;
 import android.gameengine.icadroids.input.MotionSensor;
@@ -23,7 +24,7 @@ public class FallingBird extends GameEngine{
         bird = new Bird(this);
         addGameObject(bird, 160, 50);
         setBackground("bg");
-        setScreenLandscape(false);
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
     }
     @Override
     public void update() {
