@@ -30,9 +30,14 @@ class ObstacleSpawner implements IAlarm{
             BerryAlarm.setTime(10 + (int) (100 * Math.random()));
             BerryAlarm.restartAlarm();
             Berry s = new Berry(mygame, ObstacleSpeed);
+<<<<<<< HEAD
             int y = 10 + (int) (990 * Math.random());
+=======
+            // world size has not been fixed, put it in a block of 600*400 pixels
+            int x = 10 + (int) (990 * Math.random());
+>>>>>>> origin/master
 
-            mygame.addGameObject(s, GameEngine.getScreenWidth(), y);
+            mygame.addGameObject(s,x , GameEngine.getScreenHeight());
         }
 
         else if (id == 2) {
@@ -40,6 +45,7 @@ class ObstacleSpawner implements IAlarm{
             side = setRandomSide();
             BranchAlarm.setTime(10 + (int) (80 * Math.random()));
             BranchAlarm.restartAlarm();
+<<<<<<< HEAD
             Branch r = new Branch(mygame, side, ObstacleSpeed);
             mygame.addGameObject(r, GameEngine.getScreenWidth(), 0);
             if(side == "right"){
@@ -61,6 +67,13 @@ class ObstacleSpawner implements IAlarm{
         }
         else if(side>0.3333 && side<0.6666){
             return "left";
+=======
+            Branch r = new Branch(mygame, "right", ObstacleSpeed);
+            Branch l = new Branch(mygame, "left", ObstacleSpeed);
+            Log.d("alarm test", "Branch alarm!" + id);
+            mygame.addGameObject(r, GameEngine.getScreenWidth() - r.getFrameWidth(), GameEngine.getScreenHeight());
+            mygame.addGameObject(l, 0, GameEngine.getScreenHeight());
+>>>>>>> origin/master
         }
         else {
             return "center";

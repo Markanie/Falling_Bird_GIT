@@ -17,10 +17,17 @@ public class Branch extends Obstacle implements ICollision{
         else if (pos == "right"){
             setSprite("rbranch");
         }
+<<<<<<< HEAD
         else if (pos == "centre"){
             setSprite("cbranch");
         }
         this.setxSpeed(speed);
+=======
+//        else if (pos == "centre"){
+//            setSprite("cbranch");
+//        }
+        this.setySpeed(speed);
+>>>>>>> origin/master
     }
     public void update() {
         super.update();

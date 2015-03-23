@@ -41,14 +41,14 @@ public class Bird extends MoveableGameObject implements ICollision{
 
         super.update();
       //  Log.d("roll", "" + MotionSensor.roll);
-        setySpeed(((MotionSensor.roll-88)*-1)/0.8);
+        setxSpeed((MotionSensor.roll-88)/0.8);
 
-        if(getY() > getScreenHeight()- this.getFrameHeight()) {
-          this.setY( this.getPrevY() - 3);
+        if(getX() > getScreenWidth()- this.getFrameWidth()) {
+          this.setX( this.getPrevX() - 3);
 
         }
-        if(getY() < 0) {
-            this.setY( this.getPrevY() + 3);
+        if(getX() < 0) {
+            this.setX (this.getPrevX() + 3);
 
         }
 

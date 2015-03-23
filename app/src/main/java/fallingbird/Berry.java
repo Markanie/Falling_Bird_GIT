@@ -15,7 +15,7 @@ public class Berry extends Obstacle implements ICollision{
     public Berry(FallingBird game,float speed){
         mygame = game;
         setSprite("kers");
-        this.setxSpeed(speed);
+        this.setySpeed(speed);
     }
     public void update() {
         super.update();
