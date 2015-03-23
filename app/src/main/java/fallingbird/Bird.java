@@ -6,6 +6,7 @@ import android.gameengine.icadroids.objects.GameObject;
 import android.gameengine.icadroids.objects.MoveableGameObject;
 import android.gameengine.icadroids.objects.collisions.ICollision;
 import android.gameengine.icadroids.objects.collisions.TileCollision;
+import android.graphics.Paint;
 import android.graphics.Rect;
 import android.util.Log;
 import java.lang.Math;
@@ -90,9 +91,5 @@ public class Bird extends MoveableGameObject implements ICollision{
         }
         return null;
     }
-    @Override
-    public void drawGameObject(Canvas canvas) {
-        super.drawGameObject(canvas);
 
-    }
 }

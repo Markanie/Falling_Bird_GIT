@@ -23,6 +23,7 @@ public class FallingBird extends GameEngine{
         bird = new Bird(this);
         addGameObject(bird, 160, 50);
         setBackground("bg");
+        setScreenLandscape(false);
     }
     @Override
     public void update() {
