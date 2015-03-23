@@ -29,9 +29,9 @@ public final class R {
         public static final int ic_launcher=0x7f02000f;
         public static final int kers=0x7f020010;
         public static final int launcher_logo=0x7f020011;
-        public static final int leftbtanch=0x7f020012;
+        public static final int lbranch=0x7f020012;
         public static final int nyan=0x7f020013;
-        public static final int rightbranch=0x7f020014;
+        public static final int rbranch=0x7f020014;
         public static final int select=0x7f020015;
         public static final int shoulder1=0x7f020016;
         public static final int shoulder2=0x7f020017;
