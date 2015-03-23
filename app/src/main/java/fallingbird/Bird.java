@@ -80,8 +80,9 @@ public class Bird extends MoveableGameObject implements ICollision{
             if (GameEngine.items.get(i) != this) {
              //   Log.d("object y", GameEngine.items.get(i).getY() + "" );
               //  Log.d("bird y",  this.getCenterY() + "");
-                if (this.ylocation > GameEngine.items.get(i).getY()+ GameEngine.items.get(i).getFrameHeight() &&
-                        this.ylocation < GameEngine.items.get(i).getY()- GameEngine.items.get(i).getFrameHeight()) {
+                if (this.ylocation > GameEngine.items.get(i).getY() - GameEngine.items.get(i).getFrameHeight() &&
+                        this.ylocation < GameEngine.items.get(i).getY()&&
+                          this.xlocation + this.getFrameWidth() > GameEngine.items.get(i).getX()) {
                     collidedObjects.add(GameEngine.items.get(i));
                 }
             }

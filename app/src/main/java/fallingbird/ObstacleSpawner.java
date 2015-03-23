@@ -30,7 +30,7 @@ public class ObstacleSpawner implements IAlarm{
     public void triggerAlarm(int id) {
         if (id == 2) {
            // Log.d("alarm test", "geslaagd!" + id);
-            BerryAlarm.setTime(10 + (int) (500 * Math.random()));
+            BerryAlarm.setTime(10 + (int) (1 * Math.random()));
             BerryAlarm.restartAlarm();
             Berry s = new Berry(mygame, ObstacleSpeed);
             // world size has not been fixed, put it in a block of 600*400 pixels
