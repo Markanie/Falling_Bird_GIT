@@ -32,8 +32,6 @@ ADDED from AndroidManifest.xml:10:5
 		ADDED from AndroidManifest.xml:11:9
 activity#fallingbird.FallingBird
 ADDED from AndroidManifest.xml:13:9
-	android:screenOrientation
-		ADDED from AndroidManifest.xml:16:13
 	android:label
 		ADDED from AndroidManifest.xml:14:13
 	android:name

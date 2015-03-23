@@ -17,8 +17,7 @@
         android:label="@string/app_name" >
         <activity
             android:name="fallingbird.FallingBird"
-            android:label="FallingBird"
-            android:screenOrientation="portrait" >
+            android:label="FallingBird" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

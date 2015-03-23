@@ -24,7 +24,6 @@ public class FallingBird extends GameEngine{
         bird = new Bird(this);
         addGameObject(bird, 160, 50);
         setBackground("bg");
-        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
     }
     @Override
     public void update() {

@@ -43,12 +43,12 @@ public class Bird extends MoveableGameObject implements ICollision{
       //  Log.d("roll", "" + MotionSensor.roll);
         setxSpeed((MotionSensor.roll-88)/0.8);
 
-        if(getX() > getScreenWidth()- this.getFrameWidth()) {
-          this.setX( this.getPrevX() - 3);
+        if(getX() > getScreenWidth() - this.getFrameWidth()) {
+          this.setX( this.getPrevX() - 1);
 
         }
         if(getX() < 0) {
-            this.setX (this.getPrevX() + 3);
+            this.setX (this.getPrevX() + 1);
 
         }
 
@@ -79,9 +79,10 @@ public class Bird extends MoveableGameObject implements ICollision{
         ArrayList<GameObject> collidedObjects = new ArrayList<GameObject>();
         for (int i = 0; i < GameEngine.items.size(); i++) {
             if (GameEngine.items.get(i) != this) {
-                if (this.ylocation > GameEngine.items.get(i).getY() - GameEngine.items.get(i).getFrameHeight() &&
-                        this.ylocation - this.getFrameHeight() < GameEngine.items.get(i).getY()&&
-                          this.xlocation + this.getFrameWidth() > GameEngine.items.get(i).getX()){
+                if (this.xlocation + this.getFrameWidth() < GameEngine.items.get(i).getX() + GameEngine.items.get(i).getFrameWidth() &&
+                        this.xlocation >  GameEngine.items.get(i).getX() &&
+                         this.ylocation + this.getFrameHeight()> GameEngine.items.get(i).getY())
+                {
                     collidedObjects.add(GameEngine.items.get(i));
                 }
             }
