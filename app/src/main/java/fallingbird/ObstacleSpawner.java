@@ -50,7 +50,7 @@ public class ObstacleSpawner implements IAlarm{
             Branch l = new Branch(mygame, "left", ObstacleSpeed);
             Log.d("alarm test", "Branch alarm!" + id);
             mygame.addGameObject(r, GameEngine.getScreenWidth(), 0);
-            mygame.addGameObject(l, GameEngine.getScreenWidth(), GameEngine.getScreenHeight()-100);
+            mygame.addGameObject(l, GameEngine.getScreenWidth(), GameEngine.getScreenHeight()-300);
         }
         else if (id==3) {
             

@@ -78,11 +78,9 @@ public class Bird extends MoveableGameObject implements ICollision{
         ArrayList<GameObject> collidedObjects = new ArrayList<GameObject>();
         for (int i = 0; i < GameEngine.items.size(); i++) {
             if (GameEngine.items.get(i) != this) {
-             //   Log.d("object y", GameEngine.items.get(i).getY() + "" );
-              //  Log.d("bird y",  this.getCenterY() + "");
                 if (this.ylocation > GameEngine.items.get(i).getY() - GameEngine.items.get(i).getFrameHeight() &&
-                        this.ylocation < GameEngine.items.get(i).getY()&&
-                          this.xlocation + this.getFrameWidth() > GameEngine.items.get(i).getX()) {
+                        this.ylocation - this.getFrameHeight() < GameEngine.items.get(i).getY()&&
+                          this.xlocation + this.getFrameWidth() > GameEngine.items.get(i).getX()){
                     collidedObjects.add(GameEngine.items.get(i));
                 }
             }
@@ -92,5 +90,9 @@ public class Bird extends MoveableGameObject implements ICollision{
         }
         return null;
     }
+    @Override
+    public void drawGameObject(Canvas canvas) {
+        super.drawGameObject(canvas);
 
+    }
 }
